@@ -1,0 +1,17 @@
+.container {
+    a {
+        color: #333;
+        // font: {
+        //     size: 14px;
+        //     family: sans-serif;
+        //     weight: bold;
+        // }
+
+        // 命名空间也可以包含自己的属性值，例如：
+        font: 20px/24px {
+            size: 14px;
+            family: sans-serif;
+            weight: bold;
+        }
+    }
+}
