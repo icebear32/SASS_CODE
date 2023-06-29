@@ -1,0 +1,12 @@
+$color: #333;
+
+// 如果 $color 之前没定义就使用如下的默认值
+$color: #666 !default;
+$font-size: 16px !default;
+.container {
+    // 使用的是定义好的color，而不是默认值
+    border-color: $color;
+
+    // 因为没有定义，所以调用 默认值
+    font-size: $font-size;
+}

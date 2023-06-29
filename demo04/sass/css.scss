@@ -1,0 +1,30 @@
+$color: #f00;
+
+// 连接符 - 和 下划线 _ 的都是一样
+// 要是变量名重复，则最后的会覆盖前一个
+$border-color: #f2f2f2;
+$border_color: #f00;
+$border_width: 1px;
+$font-family: 'Courier New', Courier, monospace;
+.container {
+    color: $color;
+    border-color: $border_color;
+
+    // 定义局部变量
+    $font-size: 14px;
+    font-size: $font-size;
+
+    // 将局部变量转换为全局变量可以添加 !global 声明
+    $font-style: normal !global;
+}
+
+.footer {
+    // 调用报错 - 因为调用的是局部变量，访问不到
+    // font-size: $font-size;
+
+    // 调用全局变量
+    font-family: $font-family;
+
+    // 调用 !global 声明 的局部变量没报错，因为变成全局变量
+    font-style: $font-style;
+}

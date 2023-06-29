@@ -1,0 +1,24 @@
+/* css 的变量定义和调用 */
+
+/* 定义变量 */
+:root {
+    --color: #f00;
+}
+
+body {
+    --border-color: #f2f2f2;
+}
+
+.header {
+    --background-color: #f8f8f8;
+}
+
+/* 调用变量 */
+p {
+    color: var(--color);
+    border-color: var(--border-color);
+}
+
+.header {
+    background-color: var(--background-color);
+}

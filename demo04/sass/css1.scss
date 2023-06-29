@@ -1,0 +1,43 @@
+$layer-index: 10;
+$border-width: 3px;
+$font-base-family: 'Open Sans', Helvetica, Sans-Serif;
+$top-bg-color: rgba(255, 147, 29, 0.6);
+$block-base-padding: 6px 10px 6px 10px;
+$blank-mode: true;
+$var: null;
+$color-map: (
+    color1:#fa0000,
+    color2:#fbe200,
+    color3:#95d7eb
+);
+$fonts: (
+    serif:"Helvetica Neue",
+    monospace:"Consolas"
+);
+
+.container {
+    $font-size: 16px !global;
+    font-size: $font-size;
+
+    // if..else 判断
+    @if $blank-mode {
+        background-color: #000;
+    }
+    @else {
+        background-color: #fff;
+    }
+
+    content: type-of($var);
+    content: length($var);
+    color: map-get($color-map, color2);
+}
+
+.footer {
+    font-size: $font-size;
+}
+
+.wrap {
+    // 如果列表中包含空值，则生成的 css 中将忽略空值
+    // "sans"不存在，为空值
+    font: 18px bold map-get($fonts, "sans");
+}
