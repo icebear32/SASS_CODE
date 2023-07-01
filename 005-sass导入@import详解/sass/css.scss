@@ -1,0 +1,13 @@
+// @import 'public.scss';
+// 也可以以下导入
+@import 'public';
+
+// 如下几种方式，都将作为普通的 css 语句，不会导入任何 Sass 文件
+@import '../css/public.css';
+@import url(public);
+@import 'http://xxx.xxx.com/xxx';
+@import 'landscape' screen and (orientation:landscape);
+
+p {
+    color: $font-base-color;
+}
