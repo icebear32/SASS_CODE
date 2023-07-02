@@ -1,0 +1,43 @@
+@charset "UTF-8";
+.container {
+  width: 96%;
+  margin-right: 2%;
+  border-radius: 8px;
+  border: 1px #f6f6f6 solid;
+}
+.container .warn-text {
+  font-size: 12px;
+  color: rgb(255, 253, 123);
+  line-height: 180%;
+}
+
+.container1 {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.container2 {
+  padding-top: 0;
+  padding-right: 20px;
+  padding-bottom: 0;
+  padding-left: 10px;
+}
+
+.container3 {
+  margin-top: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+/*
+    定义线性渐变
+    $direction 方向
+    $gradients 颜色过渡的值列表
+*/
+.container4 {
+  background-color: #f00;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f00), color-stop(orange), to(yellow));
+  background-image: linear-gradient(to right, #f00, orange, yellow);
+}/*# sourceMappingURL=css.css.map */
