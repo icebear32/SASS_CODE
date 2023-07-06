@@ -1,0 +1,35 @@
+$font-size: 12px;
+$line-height: 30px;
+
+p {
+    // 此处 的 / 是分隔符
+    // font: 12px / 30px Helvetica;
+
+    // 此处的 / 因为两个变量变成了 除运算符
+    // font: $font-size/$line-height Helvetica;
+
+    // 解决 - 对属性值进行插值语句操作
+    font: #{$font-size} / #{$line-height} Helvetica;
+}
+
+// 插值语句可以运用在: 选择器 属性名 属性值 注释 等等
+// 以下面的样式为例:
+// a.danger {
+//     border-color: red;
+// }
+
+
+$class-name: danger;
+$attr: color;
+$author: "ich";
+// 对 注释 操作
+/*
+    这是文件说明部分
+    @author: #{$author}
+*/
+
+// 对 选择器 操作
+a.#{$class-name} {
+    // 对属性名操作
+    border-#{$attr}: red;
+}

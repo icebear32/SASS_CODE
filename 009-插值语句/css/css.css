@@ -1,0 +1,12 @@
+@charset "UTF-8";
+p {
+  font: 12px/30px Helvetica;
+}
+
+/*
+    这是文件说明部分
+    @author: ich
+*/
+a.danger {
+  border-color: red;
+}/*# sourceMappingURL=css.css.map */
