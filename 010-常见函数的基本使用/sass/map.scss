@@ -1,0 +1,16 @@
+$font-sizes: ("small":12px,"normal":18px,"large":24px);
+$padding: (top:10px,right:20px,bottom:10px,left:30px);
+
+p {
+    // map-get(map, key)返回 Map 中 key 所对应的 value(值)  如没有对应的 key，则返回 null 值
+    font-size: map-get($map: $font-sizes, $key: "normal");
+    // map-has-key(map, key)判断 map 是否有对应的 key，存在返回 true，否则返回 false
+    @if map-has-key($map: $padding, $key: "right") {
+        padding-right: map-get($map: $padding, $key: "right");
+    }
+    &:after {
+        // map-keys(map)返回 map 中所有的 key 组成的队列
+        // map-values(map)返回 map 中所有的 value 并生成一个队列
+        content: map-keys($map: $font-sizes) + " " + map-values($map: $padding) + "";
+    }
+}

@@ -1,0 +1,27 @@
+p {
+    height: 30px;
+}
+
+.p0 {
+    background-color: #5c7a29;
+}
+
+.p1 {
+    /*
+        让颜色变亮
+        lighten($color, $amount)
+        $amount 的取值在 0% - 100% 之间
+    */
+    background-color: lighten($color: #5c7a29, $amount: 30%);
+}
+
+.p2 {
+    // 让颜色变暗 通常使用 color.scale() 代替该方案
+    background-color: darken($color: #5c7a29, $amount: 15%);
+}
+
+.p3 {
+    // 降低颜色透明度 通常使用 color.scale() 代替该方案
+    // background-color: opacity($color: #5c7a29, 0.5);
+    background-color: opacify($color: rgba(#5c7a29, 0.1), $amount: 0.5);
+}

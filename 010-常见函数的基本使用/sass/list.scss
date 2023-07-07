@@ -1,0 +1,16 @@
+p {
+    // 返回列表的长度
+    z-index: length($list: 12px); //1
+    z-index: length($list: 12px 5px 8px); // 3
+
+    // index(list, value) 返回元素 value 在列表中的索引位置
+    z-index: index($list: a b c d, $value: c); // 3
+    
+    // append($list1: , $val: , $separator: );
+    // 将单个值 value 添加到列表尾部
+    // separator 是分隔符，默认会自动侦测，或者指定为逗号或空格
+    padding: append(10px 20px, 30px);
+
+    // nth(list, n) 获取第 n 项的值
+    color: nth($list: red blue green, $n: 2); // blue
+}

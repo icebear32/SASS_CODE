@@ -1,0 +1,22 @@
+$color: #F00;
+
+@mixin padding($left: 0, $top: 0, $right: 0, $bottom: 0) {
+    padding: $top $right $bottom $left;
+}
+
+.container {
+
+    // 用 $color 会报错
+    // @if variable-exists($name: $color) {
+    @if variable-exists($name: color) {
+        color: $color;
+    }
+
+    @else {
+        content: "$color不存在";
+    }
+
+    @if mixin-exists($name: padding) {
+        @include padding($left: 10px, $right: 10px)
+    }
+}

@@ -1,0 +1,6 @@
+p {
+    z-index: abs($number: -15); // 15
+    z-index: ceil($number: 5.8); //6
+    z-index: max(5, 7, 9, 0, -3, -7); // 9
+    z-index: random($limit: 1); // 随机 0-1
+}

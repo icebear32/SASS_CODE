@@ -1,0 +1,10 @@
+p {
+    &:after {
+        // quote(string) 给字符串添加引号
+        content: quote($string: "这是里面的内容");
+    }
+    // unquote(string) 移除字符串的引号
+    background-color: unquote($string: "#F00");
+    // str-length(string) 返回字符串的长度
+    z-index: str-length($string: "sass学习");
+}

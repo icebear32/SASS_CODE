@@ -1,0 +1,9 @@
+.header {
+    background-color: #000;
+
+    // selector-append(selectors) 将第二个 (也可以有多个) 添加到第一个选择器的后面
+    content: selector-append(".a", ".b", ".c") + '';
+    
+    // 	selector-unify(selector1, selector2) 将两组选择器合成一个复合选择器 如两个选择器无法合成，则返回 null 值
+    content: selector-unify("a",".disabled") + '';
+}

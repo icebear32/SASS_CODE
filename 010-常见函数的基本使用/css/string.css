@@ -1,0 +1,8 @@
+@charset "UTF-8";
+p {
+  background-color: #F00;
+  z-index: 6;
+}
+p:after {
+  content: "这是里面的内容";
+}/*# sourceMappingURL=string.css.map */
