@@ -1,0 +1,15 @@
+@for $i from 1 to 4 {
+    .p#{$i} {
+        width: 10px * $i;
+        height: 30px;
+        background-color: red;
+    }
+}
+
+@for $j from 4 through 6 {
+    .p#{$j} {
+        width: 10px * $j;
+        height: 30px;
+        background-color: green;
+    }
+}

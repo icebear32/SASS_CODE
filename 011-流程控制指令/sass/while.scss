@@ -1,0 +1,16 @@
+$column: 12;
+@while $column > 0 {
+    .col-sm-#{$column} {
+        // width: $column / 12 * 100%;
+
+        // + 号的写法 - 代码会标红
+        // width: $column / 12 * 100 + %;
+
+        // 引号 + % 的写法
+        // width: $column / 12 * 100('%');
+        // 会出现引号包裹所有的
+        // 解决用 unquote 函数去引号
+        width: unquote($string: $column / 12 * 100 + '%');
+    }
+    $column: $column - 1;
+}

@@ -1,0 +1,68 @@
+// $theme: "red";
+$theme: "abc";
+
+.container {
+    @if $theme =="red" {
+        color: red;
+    }
+
+    @else if $theme =="blue" {
+        color: blue;
+    }
+
+    @else {
+        color: darkgray;
+    }
+}
+
+%triangle {
+    width: 0px;
+    height: 0px;
+    display: inline-block;
+}
+
+@mixin triangle($direction: top, $size: 20px, $border-color: black) {
+    border-width: $size;
+    border-#{$direction}-width: 0;
+
+    @if ($direction ==top) {
+        border-color: transparent transparent $border-color transparent;
+        border-style: dashed dashed solid dashed;
+    }
+
+    @else if ($direction ==right) {
+        border-color: transparent transparent transparent $border-color;
+        border-style: dashed dashed dashed solid;
+    }
+
+    @else if ($direction ==bottom) {
+        border-color: $border-color transparent transparent transparent;
+        border-style: solid dashed dashed dashed;
+    }
+
+    @else if ($direction ==left) {
+        border-color: transparent $border-color transparent transparent;
+        border-style: dashed solid dashed dashed;
+    }
+}
+
+.p0 {
+    @extend %triangle;
+    // 默认值
+    @include triangle();
+}
+
+.p1 {
+    @extend %triangle;
+    @include triangle(right, 20px, red)
+}
+
+.p2 {
+    @extend %triangle;
+    @include triangle(bottom, 40px, green)
+}
+
+.p3 {
+    @extend %triangle;
+    @include triangle(left, 30px, blue)
+}

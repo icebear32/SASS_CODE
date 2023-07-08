@@ -1,0 +1,19 @@
+p {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin: 10px;
+}
+
+$color-list: red green blue turquoise darkmagenta;
+
+@each $color in $color-list {
+    $index: index($color-list, $color);
+
+    // .p#{$index-1} { 会报没有这个变量的错误，因为没有把 “-” 当成 减号运算符
+    // 而是把 index-1 当成一个整体的变量
+    // 解决：用空格隔开 
+    .p#{$index - 1} {
+        background-color: $color;
+    }
+}
