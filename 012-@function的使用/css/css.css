@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/*
+    定义线性渐变
+    $direction 方向
+    $gradients 颜色过渡的值列表
+*/
+.div1 {
+  background-image: -webkit-gradient(linear, left top, right top, from(blue), to(green));
+  background-image: linear-gradient(to right, blue, green);
+}
+
+.div2 {
+  background-image: -webkit-gradient(linear, left top, right top, from(blue), to(blue));
+  background-image: linear-gradient(to right, blue, blue);
+}
+
+.div3 {
+  background-image: -webkit-gradient(linear, left top, right top, from(red), to(blue));
+  background-image: linear-gradient(to right, red, blue);
+}
+
+.div4 {
+  background-image: -webkit-gradient(linear, left top, right top, from(red), color-stop(green), to(blue));
+  background-image: linear-gradient(to right, red, green, blue);
+}
+
+.top {
+  width: 10px;
+}/*# sourceMappingURL=css.css.map */

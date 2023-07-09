@@ -1,0 +1,41 @@
+/*
+    定义线性渐变
+    $direction 方向
+    $gradients 颜色过渡的值列表
+*/
+@function background-linear-gradient($direction, $start-color, $end-color: blue) {
+    @return linear-gradient($direction, $start-color, $end-color)
+}
+
+// 正常传参
+.div1 {
+    background-image: background-linear-gradient(to right, blue, green);
+}
+
+// 省略默认值
+.div2 {
+    background-image: background-linear-gradient(to right, blue);
+}
+
+// 按照 key 进行传参
+.div3 {
+    background-image: background-linear-gradient($start-color: red, $direction: to right);
+}
+
+// 可传入任意参数 - 任意参数的调用
+@function blg($direction, $gradients...) {
+    @return linear-gradient($direction, $gradients)
+}
+
+.div4 {
+    background-image: blg(to right, red, green, blue);
+}
+
+$widths: 50px, 10px, 80px;
+.top {
+    // 固定的写法
+    // width: min(50px, 40px, 80px);
+
+    // 任意参数调用写法
+    width: min($widths...);
+}
