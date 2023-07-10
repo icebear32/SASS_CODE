@@ -1,0 +1,17 @@
+// if-else 
+$theme: 'light';
+
+.container {
+    @if $theme =='light' {
+        color: #000;
+    }
+
+    @else {
+        color: #fff;
+    }
+}
+
+// 改进 三元条件函数 if
+.container1 {
+    color: if($theme =='light', #000, #fff);
+}
