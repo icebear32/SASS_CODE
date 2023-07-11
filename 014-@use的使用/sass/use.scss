@@ -1,0 +1,21 @@
+// @use 'uses/common';
+// 更改 common 里面变量的默认值with ($font-size: 30px);
+@use 'uses/common' with($font-size:30px);
+
+@use 'css/about.css';
+
+// 重复引用会出现报错，解决方法：可以给引用另命名
+@use 'uses/global' as g1;
+@use 'uses/global' as g2;
+
+// 调用两个文件的函数名相同的函数、变量
+body {
+    // font-size: $font-size;
+    // 出现报错，应该有两个函数名相同的在不同文件，不清楚是哪一个
+
+    font-size: common.$font-size;
+    width: common.column-width(3, 12);
+    @include common.bgColor(#f00);
+    @include g1.base(#fff);
+    @include g2.base(#000);
+}

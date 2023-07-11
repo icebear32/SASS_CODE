@@ -1,0 +1,13 @@
+$font-size: 28px;
+
+@mixin base($color: #f00) {
+    color: $color;
+}
+
+.gclass {
+    background-color: #f00;
+}
+
+@function column-width($col, $total) {
+    @return percentage(calc(($col + 2) / $total))
+}

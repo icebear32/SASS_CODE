@@ -1,0 +1,14 @@
+@import 'uses/common';
+@import 'css/about';
+@import 'uses/global';
+@import 'uses/global';
+
+// 调用两个文件的函数名相同的函数、变量
+body {
+    // import 的就会 后面的函数、变量 会把 前面的覆盖掉
+    font-size: $font-size;
+    width: column-width(3, 12);
+    @include bgColor(#f00);
+    @include base(#fff);
+    @include base(#000);
+}

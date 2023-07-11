@@ -1,0 +1,19 @@
+// @use 'uses/common' with($font-size:30px);
+// @use 'css/about.css';
+
+// @use 'uses/global' as g1;
+// @use 'uses/global' as g2;
+// 因为都是同一文件目录下得
+@use 'common' with($font-size:30px);
+@use '../css/about.css';
+
+@use 'global' as g1;
+@use 'global' as g2;
+
+body {
+    font-size: common.$font-size;
+    width: common.column-width(3, 12);
+    @include common.bgColor(#f00);
+    @include g1.base(#fff);
+    @include g2.base(#000);
+}
