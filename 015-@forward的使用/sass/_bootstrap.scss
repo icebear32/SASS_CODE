@@ -1,0 +1,21 @@
+// // 转发 common
+// @forward 'uses/common';
+// // 多个转发
+// @forward 'uses/global';
+
+// 单个变量或者函数转发
+// @forward 'uses/common' show $font-size,
+// column-width;
+
+// 多个变量，只想其中一个不转发
+// @forward 'uses/common' hide bgColor;
+// @forward 'uses/global';
+
+// 解决重名
+// @forward 'uses/common' as c-* hide bgColor;
+@forward 'uses/common' as c-* hide c-bgColor  with($font-size:30px);
+// 对默认值进行设置时不用加前缀，否则会报错，
+// 因为是对源文件的操作，并不是属于转发之后的内容操作
+// @forward 'uses/common' as c-* hide c-bgColor  with($c-font-size:30px);
+
+@forward 'uses/global' as g-*;

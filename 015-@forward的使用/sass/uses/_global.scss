@@ -1,0 +1,11 @@
+// 将私有化变量公开出来
+// $-font-size: 28px; 
+$font-size: 28px;
+
+@mixin base($color: #f00) {
+    color: $color;
+}
+
+.gclass {
+    background-color: #f00;
+}

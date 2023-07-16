@@ -1,0 +1,22 @@
+// @use 'uses' as index;
+
+// .container {
+//     font-size: index.$font-size;
+// }
+
+// 引用 转发 内容
+@use './bootstrap';
+
+.test {
+    font-size: bootstrap.$c-font-size;
+}
+
+body {
+    font-size: bootstrap.$c-font-size;
+    width: bootstrap.c-column-width(3, 12);
+
+    // @include bootstrap.bgColor(#f00); // 被hide隐藏不能引用 
+    // @include bootstrap.c-bgColor(#f00);
+
+    @include bootstrap.g-base(#f00);
+}
