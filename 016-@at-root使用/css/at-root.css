@@ -1,0 +1,52 @@
+@charset "UTF-8";
+.parent {
+  font-size: 12px;
+}
+.parent .child {
+  font-size: 14px;
+}
+.parent .child .son {
+  font-size: 16px;
+}
+
+/* @at-root 跳出嵌套 */
+.parent1 {
+  font-size: 12px;
+}
+.child1 {
+  font-size: 14px;
+}
+.son1 {
+  font-size: 16px;
+}
+
+/* 整合跳出嵌套 */
+/* 普通嵌套 */
+.parent3 {
+  font-size: 12px;
+}
+.parent3 .child1 {
+  font-size: 12px;
+}
+.parent3 .child2 {
+  font-size: 14px;
+}
+.parent3 .child3 {
+  font-size: 16px;
+}
+
+/* 整合跳出嵌套 */
+.parent4 {
+  font-size: 12px;
+}
+.child1 {
+  font-size: 12px;
+}
+
+.child2 {
+  font-size: 14px;
+}
+
+.child3 {
+  font-size: 16px;
+}/*# sourceMappingURL=at-root.css.map */

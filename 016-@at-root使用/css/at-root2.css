@@ -1,0 +1,15 @@
+.foo .bar {
+  font-size: 12px;
+}
+
+.foo {
+  font-size: 12px;
+}
+
+.foo .bar {
+  font-size: 12px;
+}
+
+.bar .foo {
+  font-size: 12px;
+}/*# sourceMappingURL=at-root2.css.map */

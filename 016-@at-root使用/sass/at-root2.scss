@@ -1,0 +1,23 @@
+.foo {
+    .bar {
+        font-size: 12px;
+    }
+}
+
+.foo {
+    & {
+        font-size: 12px;
+    }
+}
+
+.foo {
+    & .bar {
+        font-size: 12px;
+    }
+}
+
+.foo {
+    .bar & {
+        font-size: 12px;
+    }
+}

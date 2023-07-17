@@ -1,0 +1,51 @@
+.parent {
+    font-size: 12px;
+    .child {
+        font-size: 14px;
+        .son {
+            font-size: 16px;
+        }
+    }
+}
+
+/* @at-root 跳出嵌套 */
+.parent1 {
+    font-size: 12px;
+    @at-root .child1 {
+        font-size: 14px;
+        @at-root .son1 {
+            font-size: 16px;
+        }
+    }
+}
+
+/* 整合跳出嵌套 */
+/* 普通嵌套 */
+.parent3 {
+    font-size: 12px;
+    .child1 {
+        font-size: 12px;
+    }
+    .child2 {
+        font-size: 14px;
+    }
+    .child3 {
+        font-size: 16px;
+    }
+}
+
+/* 整合跳出嵌套 */
+.parent4 {
+    font-size: 12px;
+    @at-root {
+        .child1 {
+            font-size: 12px;
+        }
+        .child2 {
+            font-size: 14px;
+        }
+        .child3 {
+            font-size: 16px;
+        }
+    }
+}
